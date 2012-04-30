@@ -29,4 +29,15 @@ It then reads the existing timing information and stores the minimum of that and
 ### ``evalcores.py``
 This file evaluates the information in ``src/test/results/<N>threads_gcc.npz`` and creates some nice plots.
 
+## Docstring
+The docstring of the `expmat.expmc` function is as follows:
 
+```
+expmc( A, expmA ) :
+    Compute the matrix exponential using Pade approximation.
+        Parameters
+            A : array, shape(M,M)
+                Matrix to be exponentiated
+            expA : array, shape(M,M)
+                Matrix exponential of A (overwritten by function)
+```
