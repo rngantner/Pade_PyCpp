@@ -22,4 +22,7 @@ It stores results in the files ``src/test/results/<N>threads_gcc.npz`` where the
 If multiple runs are needed (better results), this file can just be executed multiple times.
 It then reads the existing timing information and stores the minimum of that and the new timings.
 
+### ``evalcores.py``
+This file evaluates the information in ``src/test/results/<N>threads_gcc.npz`` and creates some nice plots.
+
 
