@@ -7,7 +7,7 @@ import os.path
 import sys
 
 sys.path.append('..')
-import expmat as e
+import cpade as e
 
 def runtiming(T,Nvals,Tc,reps):
     """runs timing with given type T"""
@@ -22,7 +22,7 @@ def runtiming(T,Nvals,Tc,reps):
             expA = zeros_like(A)
             
             t = time.time()
-            e.expmc(A,expA) # call C version with Eigen Pade approx.
+            e.expm(A,expA) # call C version with Eigen Pade approx.
             ctime = min(ctime, time.time()-t)
         print ctime
         Tc[T].append(ctime)

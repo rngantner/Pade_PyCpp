@@ -9,7 +9,7 @@ import os
 
 import sys
 sys.path.append('..')
-import expmat as e
+import cpade as e
 import expm as e2
 
 if __name__ == '__main__':
@@ -43,7 +43,7 @@ if __name__ == '__main__':
                 expA = zeros_like(A)
                 
                 t = time.time()
-                e.expmc(A,expA) # call C version with Eigen Pade approx.
+                e.expm(A,expA) # call C version with Eigen Pade approx.
                 ctime = min(ctime, time.time()-t)
             
             # time scipy version

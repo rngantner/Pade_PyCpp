@@ -9,7 +9,7 @@ import sys
 
 # add path to exmat module
 sys.path.append('..')
-import expmat as e
+import cpade as e
 
 from numpy.testing import assert_almost_equal
 class TestTypes:
@@ -21,7 +21,7 @@ class TestTypes:
             v = ones((n,1), dtype=T)
             # C++ version
             expA = zeros_like(A)
-            e.expmc(A,expA)
+            e.expm(A,expA)
             # assertion
             assert_almost_equal(expm(A),expA,prec)
 
