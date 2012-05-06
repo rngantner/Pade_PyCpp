@@ -120,11 +120,10 @@ void expm_py(PyObject* A_in, PyObject* expA_out) {
 
 namespace bp = boost::python;
 #include "boost/python.hpp"
-BOOST_PYTHON_MODULE(expmat) {
+BOOST_PYTHON_MODULE(cpade) {
     bp::numeric::array::set_module_and_type("numpy", "ndarray");
     
-    boost::python::def("expmc", expm_py, "Compute the matrix exponential using Pade approximation.\n    Parameters\n        A : array, shape(M,M)\n            Matrix to be exponentiated\n\n        expA : array, shape(M,M)\n            Matrix exponential of A (overwritten by function)");
-    //boost::python::def("expmAc", expmA_py); // Arnoldi approximation
+    boost::python::def("expm", expm_py, "Compute the matrix exponential using Pade approximation.\n    Parameters\n        A : array, shape(M,M)\n            Matrix to be exponentiated\n\n        expA : array, shape(M,M)\n            Matrix exponential of A (overwritten by function)");
 }
 #endif
 
